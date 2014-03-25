@@ -73,3 +73,6 @@ export PATH="/home/y/bin64:/home/y/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin
 # ssh
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
+
+
+alias ll='ls -ls'
