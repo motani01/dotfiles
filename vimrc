@@ -54,8 +54,17 @@ call s:InitNeoBundle()
 "------------------------------------------------------------------------"
 "			my setting
 "------------------------------------------------------------------------"
+se cindent
 se hidden
+se tabstop=4
+se softtabstop=4
+se shiftwidth=4
+se number
+se hlsearch
+se expandtab
+
 colorscheme molokai 
+
 nmap <Space>n :bn<CR>
 nmap <Space>p :bp<CR>
 nmap <C-l> <C-w>l
