@@ -1,4 +1,5 @@
-DOT_FILES = .zshrc .zsh .vimrc .vim .tmux.conf .tmux .gitconfig .gitignore .ctags
+#DOT_FILES = .zshrc .zsh .vimrc .vim .tmux.conf .tmux .gitconfig .gitignore .ctags
+DOT_FILES = .zshrc .vimrc .vim .tmux.conf .gitconfig .gitignore .ctags
 CURRENTDIR = $(shell pwd)
 BACKUPDIR = $(HOME)/.dotfiles.bk
 

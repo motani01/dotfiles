@@ -19,6 +19,7 @@ function! s:LoadBundles()
   NeoBundle 'fholgado/minibufexpl.vim'
   NeoBundle 'vim-scripts/xoria256.vim'
   NeoBundle 'tomasr/molokai'
+  NeoBundle "vim-scripts/taglist.vim"
   " ...
   " 読み込んだプラグインの設定
   " ...
