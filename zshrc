@@ -81,4 +81,16 @@ alias ctags='ctags -f tags'
 setopt auto_cd
 function chpwd() { ls }
 
+# oracle 
+ORACLE_SID=
+ORACLE_HOME=/home/y/libexec/oracle
+TNS_ADMIN=/home/y/conf/oracle
+#NLS_LANG=Japanese_Japan.JA16EUC
+NLS_LANG=Japanese_Japan.AL32UTF8
+NLS_DATE_FORMAT='yyyy-mm-dd hh24:mi:ss'
+export ORACLE_SID ORACLE_HOME TNS_ADMIN NLS_LANG
 
+LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME
+export ORACLE_HOME=/home/y/lib64/ora11gclient
+export PATH=$ORACLE_HOME:$PATH
+export LD_LIBRARY_PATH=/home/y/lib64/ora11gclient
