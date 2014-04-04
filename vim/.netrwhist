@@ -1,11 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =9
-let g:netrw_dirhist_1='/home/motani/develop/yank-api/src/yank/api/controllers'
-let g:netrw_dirhist_2='/home/motani/develop/yank-api'
-let g:netrw_dirhist_3='/home/motani/develop/yank-api/src'
-let g:netrw_dirhist_4='/home/motani/develop/yank-api/src/yank'
-let g:netrw_dirhist_5='/home/motani/develop/yank-api/src/yank/api'
-let g:netrw_dirhist_6='/home/motani/develop/pexweb/src/pexweb'
-let g:netrw_dirhist_7='/home/motani/dotfiles/zsh'
-let g:netrw_dirhist_8='/home/motani/dotfiles/zsh/templates'
-let g:netrw_dirhist_9='/home/motani/dotfiles/zsh'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/motani/dotfiles/vim'

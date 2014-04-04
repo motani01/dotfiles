@@ -20,6 +20,7 @@ function! s:LoadBundles()
   NeoBundle 'vim-scripts/xoria256.vim'
   NeoBundle 'tomasr/molokai'
   NeoBundle "vim-scripts/taglist.vim"
+  NeoBundle 'bling/vim-airline'
   " ...
   " 読み込んだプラグインの設定
   " ...
@@ -63,8 +64,13 @@ se shiftwidth=4
 se number
 se hlsearch
 se expandtab
+se list
+se listchars=tab:^\ ,trail:_
+set laststatus=2
 
-colorscheme molokai 
+"se tags=.tags;
+
+colorscheme molokai
 
 nmap <Space>n :bn<CR>
 nmap <Space>p :bp<CR>
@@ -72,3 +78,4 @@ nmap <C-l> <C-w>l
 nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
+
