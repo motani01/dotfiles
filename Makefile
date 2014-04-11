@@ -8,6 +8,7 @@ install: gitsubmodule zsh vim tmux git ctags
 
 gitsubmodule:
 	git submodule update --init
+	git submodule foreach 'git checkout master; git pull'
 
 backup: make-backup-dir $(foreach f, $(DOT_FILES), backup-dot-files-$(f))
 
