@@ -50,8 +50,8 @@ ZSH_THEME="steeef"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 plugins=o(git)
 
-#autoload -U compinit
-#compinit
+autoload -U compinit
+compinit
 
 source $ZSH/oh-my-zsh.sh
 
@@ -95,3 +95,4 @@ LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME
 export ORACLE_HOME=/home/y/lib64/ora11gclient
 export PATH=$ORACLE_HOME:$PATH
 export LD_LIBRARY_PATH=/home/y/lib64/ora11gclient
+
