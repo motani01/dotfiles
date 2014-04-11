@@ -74,7 +74,8 @@ export PATH="/home/y/bin64:/home/y/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # alias 
-alias ll='ls -ls'
+alias ls='ls -G'
+alias ll='ls -ltar'
 alias ctags='ctags -f tags'
 
 #cdとlsの省略

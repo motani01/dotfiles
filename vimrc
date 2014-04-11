@@ -24,6 +24,7 @@ function! s:LoadBundles()
   " ...
   " 読み込んだプラグインの設定
   " ...
+  colorscheme molokai
 endfunction
  
 " NeoBundle がインストールされているなら LoadBundles() を呼び出す
@@ -70,7 +71,6 @@ set laststatus=2
 
 "se tags=.tags;
 
-colorscheme molokai
 
 nmap <Space>n :bn<CR>
 nmap <Space>p :bp<CR>
