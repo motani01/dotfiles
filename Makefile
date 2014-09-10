@@ -18,7 +18,7 @@ remove: restore  $(foreach f, $(DOT_FILES), remove-dot-files-$(f))
 
 clean: $(foreach f, $(DOT_FILES), unlink-dot-file-$(f))
 
-zsh: $(foreach f, $(filter .zsh%, $(DOT_FILES)), link-dot-file-$(f))
+zsh: $(foreach f, $(filter .zsh%, $(DOT_FILES)), link-dot-file-$(f)) add-zsh-theme
 
 vim: $(foreach f, $(filter .vim%, $(DOT_FILES)), link-dot-file-$(f)) vim-dependency
 
@@ -29,6 +29,9 @@ git: $(foreach f, $(filter .git%, $(DOT_FILES)), link-dot-file-$(f))
 ctags: $(foreach f, $(filter .ctags%, $(DOT_FILES)), link-dot-file-$(f))
 
 bash: $(foreach f, $(filter .bash%, $(DOT_FILES)), link-dot-file-$(f))
+
+add-zsh-theme:
+	@cp zsh_theme/* zsh/themes/
 
 make-backup-dir:
 	mkdir -p $(BACKUPDIR)

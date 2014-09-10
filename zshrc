@@ -8,7 +8,8 @@ ZSH=$HOME/.zsh
 
 #ZSH_THEME="orizinal"
 #ZSH_THEME="irobbyrussell"
-ZSH_THEME="steeef"
+#ZSH_THEME="steeef"
+ZSH_THEME="original"
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -81,6 +82,9 @@ alias ctags='ctags -f tags'
 #cdとlsの省略
 setopt auto_cd
 function chpwd() { ls }
+
+# PAHT設定
+CDPATH=.:/home/y/logs:/home/y
 
 # oracle 
 ORACLE_SID=

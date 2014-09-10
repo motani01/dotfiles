@@ -1,8 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =6
+let g:netrw_dirhist_cnt =9
 let g:netrw_dirhist_1='/home/motani/dotfiles/vim'
 let g:netrw_dirhist_2='/home/motani/develop/yank-api/src'
 let g:netrw_dirhist_3='/home/motani/develop/yank-api/conf/miniy'
 let g:netrw_dirhist_4='/home/motani/develop/yank-api/dep'
 let g:netrw_dirhist_5='/home/motani/develop/yank-api/tests'
 let g:netrw_dirhist_6='/home/motani/develop/yank-api/src'
+let g:netrw_dirhist_7='/home/motani'
+let g:netrw_dirhist_8='/home/motani/develop/demo/dep'
+let g:netrw_dirhist_9='/home/motani/dotfiles/zsh'
