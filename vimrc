@@ -68,10 +68,10 @@ se expandtab
 se list
 se listchars=tab:^\ ,trail:_
 set laststatus=2
-set fenc=euc-jp
-set enc=euc-jp
-"set fenc=utf-8
-"set enc=utf-8
+"set fenc=euc-jp
+"set enc=euc-jp
+set fenc=utf-8
+set enc=utf-8
 "se tags=.tags;
 
 
