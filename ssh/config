@@ -1,15 +1,22 @@
-ForwardAgent yes
-
+# pex config
 Host *.pex.ogk.yahoo.co.jp
     ProxyCommand ssh login1.corp.yahoo.co.jp nc %h %p
 
 Host *.pex.kks.yahoo.co.jp
     ProxyCommand ssh login1.corp.yahoo.co.jp nc %h %p
 
+
 Host *.pex.kks.ynwp.yahoo.co.jp
     ProxyCommand ssh login1.corp.yahoo.co.jp nc %h %p
 
+# other
 Host github.corp.yahoo.co.jp
     User motani
     Port 22
     Hostname github.corp.yahoo.co.jp
+
+# All config
+Host *
+  User         motani
+  ForwardAgent yes
+  Protocol     2
