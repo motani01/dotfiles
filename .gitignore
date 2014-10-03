@@ -1,3 +1,4 @@
 vim/bundle/*
 !vim/bundle/neobundle
+vim/.netrwhist
 ssh/known_hosts

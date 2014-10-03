@@ -4,7 +4,7 @@
 " NeoBundle がインストールされていない時、
 " もしくは、プラグインの初期化に失敗した時の処理
 function! s:WithoutBundles()
-  colorscheme desert
+  colorscheme molokai
   " その他の処理
 endfunction
  
@@ -68,12 +68,9 @@ se expandtab
 se list
 se listchars=tab:^\ ,trail:_
 set laststatus=2
-set fenc=euc-jp
-set enc=euc-jp
-"set fenc=utf-8
-"set enc=utf-8
+set fenc=utf-8
+set enc=utf-8
 "se tags=.tags;
-
 
 nmap <Space>n :bn<CR>
 nmap <Space>p :bp<CR>
