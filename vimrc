@@ -73,6 +73,8 @@ set laststatus=2
 set fenc=utf-8
 set enc=utf-8
 "se tags=.tags;
+set nobackup
+set swapfile
 
 nmap <Space>n :bn<CR>
 nmap <Space>p :bp<CR>
