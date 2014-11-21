@@ -94,6 +94,7 @@ TNS_ADMIN=/home/y/conf/oracle
 NLS_LANG=Japanese_Japan.AL32UTF8
 NLS_DATE_FORMAT='yyyy-mm-dd hh24:mi:ss'
 export ORACLE_SID ORACLE_HOME TNS_ADMIN NLS_LANG
+export EDITOR=vim
 
 LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME
 export ORACLE_HOME=/home/y/lib64/ora11gclient

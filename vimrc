@@ -21,6 +21,8 @@ function! s:LoadBundles()
   NeoBundle 'tomasr/molokai'
   NeoBundle "vim-scripts/taglist.vim"
   NeoBundle 'bling/vim-airline'
+  NeoBundle 'vim-scripts/sudo.vim.git'
+  NeoBundle 'StanAngeloff/php.vim.git'
   " ...
   " 読み込んだプラグインの設定
   " ...
