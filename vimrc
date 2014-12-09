@@ -26,7 +26,6 @@ function! s:LoadBundles()
   " ...
   " 読み込んだプラグインの設定
   " ...
-  colorscheme molokai
 endfunction
  
 " NeoBundle がインストールされているなら LoadBundles() を呼び出す
@@ -38,8 +37,10 @@ function! s:InitNeoBundle()
       set runtimepath+=~/.vim/bundle/neobundle.vim/
     endif
     try
-      call neobundle#rc(expand('~/.vim/bundle/'))
+      call neobundle#begin(expand('~/.vim/bundle/'))
       call s:LoadBundles()
+      call neobundle#end()
+      colorscheme molokai
     catch
       call s:WithoutBundles()
     endtry

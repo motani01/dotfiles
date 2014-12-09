@@ -100,4 +100,4 @@ LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME
 export ORACLE_HOME=/home/y/lib64/ora11gclient
 export PATH=$ORACLE_HOME:$PATH
 export LD_LIBRARY_PATH=/home/y/lib64/ora11gclient
-
+export TERM=xterm-256color
