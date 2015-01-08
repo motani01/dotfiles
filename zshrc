@@ -58,7 +58,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/home/y/bin64:/home/y/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/motani/bin"
+export PATH="/home/y/bin64:/home/y/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/motani/.bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
@@ -78,12 +78,23 @@ export PATH="/home/y/bin64:/home/y/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin
 alias ls='ls -G'
 alias ll='ls -ltar'
 alias ctags='ctags -f tags'
+alias -g P='| peco'
+alias reload='exec /bin/zsh -l'
+alias history=history
 
 #cdとlsの省略
 setopt auto_cd
 function chpwd() { ls }
 
-# PAHT設定
+# kando設定
+setopt auto_pushd # pushdを自動で行う
+setopt pushd_ignore_dups # 重複するディレクトリは保存しない
+setopt list_packed # 補完候補を表示するときにつめて表示
+setopt nolistbeep # no beep sound when complete list displayed
+setopt prompt_subst
+export WORDCHARS="*?_-.[]~&;!#$%^(){}<>" # 単語に引っかからない記号を定義
+
+# CDPATH設定
 CDPATH=.:/home/y/logs:/home/y
 
 # oracle 
@@ -101,3 +112,23 @@ export ORACLE_HOME=/home/y/lib64/ora11gclient
 export PATH=$ORACLE_HOME:$PATH
 export LD_LIBRARY_PATH=/home/y/lib64/ora11gclient
 export TERM=xterm-256color
+
+
+# peco functions
+function peco-cmdsearch() {
+    BUFFER=$((history -n 1 | tac) | peco --query "$LBUFFER")
+    zle clear-screen
+}
+zle -N peco-cmdsearch
+bindkey '^r' peco-cmdsearch
+
+function peco-sshsearch() {
+    ssh_server=$((cat ~/.ssh/known_hosts | sed -e 's/[, ].*$//' | sort -u) | peco --query "$LBUFFER")
+    if [ -n "$ssh_server" ]; then
+        BUFFER="ssh $ssh_server"
+        zle accept-line
+    fi
+    zle clear-screen
+}
+zle -N peco-sshsearch
+bindkey '^s' peco-sshsearch

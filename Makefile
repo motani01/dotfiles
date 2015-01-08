@@ -1,5 +1,5 @@
 #DOT_FILES = .zshrc .zsh .vimrc .vim .tmux.conf .tmux .gitconfig .gitignore .ctags
-DOT_FILES = .zshrc .vimrc .vim .tmux.conf .gitconfig .gitignore .ctags .zsh .bashrc .bash_profile .ssh
+DOT_FILES = .zshrc .vimrc .vim .tmux.conf .gitconfig .gitignore .ctags .zsh .bashrc .bash_profile .ssh .bin
 CURRENTDIR = $(shell pwd)
 BACKUPDIR = $(HOME)/.dotfiles.bk
 
@@ -18,7 +18,7 @@ remove: restore  $(foreach f, $(DOT_FILES), remove-dot-files-$(f))
 
 clean: $(foreach f, $(DOT_FILES), unlink-dot-file-$(f))
 
-zsh: $(foreach f, $(filter .zsh%, $(DOT_FILES)), link-dot-file-$(f)) add-zsh-theme
+zsh: $(foreach f, $(filter .zsh%, $(DOT_FILES)), link-dot-file-$(f)) add-zsh-theme link-bin-dir
 
 vim: $(foreach f, $(filter .vim%, $(DOT_FILES)), link-dot-file-$(f)) vim-dependency
 
@@ -37,6 +37,9 @@ add-zsh-theme:
 
 make-backup-dir:
 	mkdir -p $(BACKUPDIR)
+
+link-bin-dir:
+	ln -snf $(CURRENTDIR)/bin $(HOME)/.bin
 
 vim-dependency:
 	vim -c NeoBundleInstall
