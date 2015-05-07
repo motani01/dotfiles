@@ -8,6 +8,7 @@ alias hube='GITHUB_HOST=git.corp.yahoo.co.jp hub'
 alias subl='/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl'
 # require coreutils
 # ex. brew install coreutils
+PATH=`pwd`/.bin/Darwin:$PATH
 alias ls='gls --color'
 if [ -f ~/.dir_colors ]; then
     eval `gdircolors -b ~/.dir_colors`

@@ -9,7 +9,7 @@ if [ -f ~/.dir_colors ]; then
     eval `dircolors -b ~/.dir_colors`
 fi
 
-PATH=/home/y/bin64:/home/y/bin:$PATH
+PATH=/home/y/bin64:/home/y/bin:`pwd`/.bin/Linux:$PATH
 CDPATH=.:/home/y/logs:/home/y
 
 # tmuxのセッションが切れた時にssh出来ない問題を削除する用に変更
