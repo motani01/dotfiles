@@ -58,7 +58,9 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="/home/y/bin64:/home/y/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/motani/.bin"
+export PATH="/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:`pwd`/.bin"
+
+source ~/.zsh/custom/`uname`.zsh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # # Preferred editor for local and remote sessions
@@ -75,12 +77,11 @@ export PATH="/home/y/bin64:/home/y/bin:/usr/lib64/qt-3.3/bin:/usr/local/bin:/bin
 # export SSH_KEY_PATH="~/.ssh/dsa_id"
 
 # alias 
-alias ls='ls -G'
 alias ll='ls -ltar'
 alias ctags='ctags -f tags'
 alias -g P='| peco'
 alias reload='exec /bin/zsh -l'
-alias history=history
+alias history=history # oh my zshの設定を上書きする
 
 #cdとlsの省略
 setopt auto_cd
@@ -94,25 +95,8 @@ setopt nolistbeep # no beep sound when complete list displayed
 setopt prompt_subst
 export WORDCHARS="*?_-.[]~&;!#$%^(){}<>" # 単語に引っかからない記号を定義
 
-# CDPATH設定
-CDPATH=.:/home/y/logs:/home/y
-
-# oracle 
-ORACLE_SID=
-ORACLE_HOME=/home/y/libexec/oracle
-TNS_ADMIN=/home/y/conf/oracle
-#NLS_LANG=Japanese_Japan.JA16EUC
-NLS_LANG=Japanese_Japan.AL32UTF8
-NLS_DATE_FORMAT='yyyy-mm-dd hh24:mi:ss'
-export ORACLE_SID ORACLE_HOME TNS_ADMIN NLS_LANG
 export EDITOR=vim
-
-LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ORACLE_HOME
-export ORACLE_HOME=/home/y/lib64/ora11gclient
-export PATH=$ORACLE_HOME:$PATH
-export LD_LIBRARY_PATH=/home/y/lib64/ora11gclient
 export TERM=xterm-256color
-
 
 # peco functions
 function peco-cmdsearch() {
