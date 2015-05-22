@@ -1,9 +1,3 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/home/motani/develop/moneta-feapi/src/Moneta/Feapi/Infrastructure/Vaapi'
-let g:netrw_dirhist_2='/home/motani/develop/moneta-feapi_2/tests'
-let g:netrw_dirhist_3='/home/motani/develop/moneta-feapi-motani/conf'
-let g:netrw_dirhist_4='/home/motani/develop/moneta-feapi-motani/tests/unit/Moneta/Tests'
-let g:netrw_dirhist_5='/home/motani/develop/moneta-web/src/Moneta/Web/Account'
-let g:netrw_dirhist_6='/home/motani/develop/moneta-feapi/tests/unit/Moneta/Tests/Feapi/Transaction'
-let g:netrw_dirhist_7='/home/motani/dotfiles/zsh'
+let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_1='/home/motani/dotfiles'
