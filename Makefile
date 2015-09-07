@@ -34,8 +34,8 @@ ssh: $(foreach f, $(filter .ssh%, $(DOT_FILES)), link-dot-file-$(f))
 
 add-zsh-custom:
 	@cp zsh_custom/*.zsh-theme zsh/themes/
-	@cp zsh_custom/$(shell uname).zsh zsh/custom/
-	@cp zsh_custom/snippets zsh/
+	@ln -snf $(CURRENTDIR)/zsh_custom/$(shell uname).zsh $(CURRENTDIR)/zsh/custom/$(shell uname).zsh
+	@ln -snf $(CURRENTDIR)/zsh_custom/snippets $(CURRENTDIR)/zsh/snippets
 
 make-backup-dir:
 	mkdir -p $(BACKUPDIR)
