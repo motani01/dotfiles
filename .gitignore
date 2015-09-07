@@ -3,4 +3,5 @@ vim/bundle/*
 vim/reference/*
 vim/bundle/neobundle.vim
 zsh/
+!zsh/custom
 ssh/known_hosts

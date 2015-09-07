@@ -1,3 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
+let g:netrw_dirhist_cnt =6
 let g:netrw_dirhist_1='/home/motani/dotfiles'
+let g:netrw_dirhist_2='/home/motani/.ghq/git.corp.yahoo.co.jp/moneta/moneta-config/pkg/config'
+let g:netrw_dirhist_3='/home/motani/.ghq/gitlab.hulk.ssk.ynwm.yahoo.co.jp/instproxy/instapi/gradle'
+let g:netrw_dirhist_4='/home/motani/.ghq/gitlab.hulk.ssk.ynwm.yahoo.co.jp/instproxy/instapi/dep/prod'
+let g:netrw_dirhist_5='/home/motani/cardnet_install'
+let g:netrw_dirhist_6='/home/motani/Test/hulk-instapi-integrationtest/tests'
