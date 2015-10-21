@@ -26,3 +26,14 @@ export TNS_ADMIN="/home/y/conf/oracle"
 export NLS_DATE_FORMAT="YYYY-MM-DD"
 export NLS_LANG="Japanese_Japan.AL32UTF8"
 export LD_LIBRARY_PATH="/home/y/lib64/ora11gclient/"
+
+## 環境変数
+# カプラ本体の設定
+export CN_DIR=/opt/CARDNET
+export PATH=/opt/CARDNET/bin:$PATH
+export LD_LIBRARY_PATH=/opt/CARDNET/lib:$LD_LIBRARY_PATH
+
+# GWの設定
+export RG_DIR=/opt/CARDNET_RG
+export LD_LIBRARY_PATH=/opt/CARDNET_RG/lib:$LD_LIBRARY_PATH
+export PATH=/opt/CARDNET_RG/bin:$PATH
