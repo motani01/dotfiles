@@ -1,13 +1,13 @@
-# pex config
-Host *.pex.ogk.yahoo.co.jp
+# login1
+Host *.ssk.ynwp.yahoo.co.jp
     ProxyCommand ssh login1.corp.yahoo.co.jp nc %h %p
+    ControlMaster auto
+    ControlPath ~/.ssh/ctrl-%r@%h
 
-Host *.pex.kks.yahoo.co.jp
+Host *.kks.ynwp.yahoo.co.jp
     ProxyCommand ssh login1.corp.yahoo.co.jp nc %h %p
-
-
-Host *.pex.kks.ynwp.yahoo.co.jp
-    ProxyCommand ssh login1.corp.yahoo.co.jp nc %h %p
+    ControlMaster auto
+    ControlPath ~/.ssh/ctrl-%r@%h
 
 # other
 Host github.corp.yahoo.co.jp

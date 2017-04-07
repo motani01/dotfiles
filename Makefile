@@ -1,10 +1,10 @@
 #DOT_FILES = .zshrc .zsh .vimrc .vim .tmux.conf .tmux .gitconfig .gitignore .ctags
-DOT_FILES = .zshrc .vimrc .vim .tmux.conf .gitconfig .gitignore .ctags .zsh .bashrc .bash_profile .ssh .bin
+DOT_FILES = .zshrc .vimrc .vim .tmux.conf .gitconfig .gitignore .ctags .zsh .bashrc .bash_profile .bin
 CURRENTDIR = $(shell pwd)
 BACKUPDIR = $(HOME)/.dotfiles.bk
 
 all: backup clean install
-install: gitsubmodule zsh vim tmux git ctags bash ssh
+install: gitsubmodule zsh vim tmux git ctags bash
 
 gitsubmodule:
 	git submodule update --init
@@ -29,8 +29,6 @@ git: $(foreach f, $(filter .git%, $(DOT_FILES)), link-dot-file-$(f))
 ctags: $(foreach f, $(filter .ctags%, $(DOT_FILES)), link-dot-file-$(f))
 
 bash: $(foreach f, $(filter .bash%, $(DOT_FILES)), link-dot-file-$(f))
-
-ssh: $(foreach f, $(filter .ssh%, $(DOT_FILES)), link-dot-file-$(f))
 
 add-zsh-custom:
 	@cp zsh_custom/*.zsh-theme zsh/themes/

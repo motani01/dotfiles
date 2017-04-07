@@ -17,6 +17,7 @@ Host github.corp.yahoo.co.jp
 
 # All config
 Host *
-  User         motani
-  ForwardAgent yes
-  Protocol     2
+    User         motani
+    ForwardAgent yes
+    Protocol     2
+    HostKeyAlgorithms +ssh-dss
