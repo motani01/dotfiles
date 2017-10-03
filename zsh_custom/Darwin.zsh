@@ -13,3 +13,12 @@ PATH=`pwd`/.bin/Darwin:$PATH
 if [ -f ~/.dir_colors ]; then
     eval `gdircolors -b ~/.dir_colors`
 fi
+
+# memo
+export GOPATH=$HOME/go
+export PATH=$PATH:$GOPATH/bin
+export GOBIN=$GOPATH/bin
+alias memocat='memo list --fullpath | peco | xargs cat'
+
+# 鍵の設定
+ssh-add -K ~/.ssh/id_rsa_20170925
