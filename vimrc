@@ -86,3 +86,10 @@ nmap <C-h> <C-w>h
 nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 
+" インサートモードでもhjklで移動（Ctrl押すけどね）
+inoremap <C-n> <Down>
+inoremap <C-p> <Up>
+inoremap <C-b> <Left>
+inoremap <C-f> <Right>
+inoremap <C-h> <BackSpace>
+inoremap <C-d> <Del>
