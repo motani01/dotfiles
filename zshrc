@@ -12,9 +12,6 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="$PATH:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:`pwd`/bin"
 
-# 鍵の設定
-ssh-add -K ~/.ssh/id_rsa_20170327
-
 # alias 
 alias ll='ls -ltar'
 alias ctags='ctags -f tags'
