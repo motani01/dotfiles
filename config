@@ -1,11 +1,8 @@
 # login1
-Host *.ssk.ynwp.yahoo.co.jp
+Host *.kks.ynwp.yahoo.co.jp *.ssk.ynwp.yahoo.co.jp *.ops.bbt.yahoo.co.jp *.ops.ogk.yahoo.co.jp
     ProxyCommand ssh login1.corp.yahoo.co.jp nc %h %p
-    ControlMaster auto
-    ControlPath ~/.ssh/ctrl-%r@%h
 
-Host *.kks.ynwp.yahoo.co.jp
-    ProxyCommand ssh login1.corp.yahoo.co.jp nc %h %p
+Host login1.corp.yahoo.co.jp
     ControlMaster auto
     ControlPath ~/.ssh/ctrl-%r@%h
 

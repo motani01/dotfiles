@@ -4,7 +4,7 @@ CURRENTDIR = $(shell pwd)
 BACKUPDIR = $(HOME)/.dotfiles.bk
 
 all: backup clean install
-install: gitsubmodule zsh vim tmux git ctags bash
+install: gitsubmodule ssh zsh vim tmux git ctags bash
 
 gitsubmodule:
 	git submodule update --init
@@ -17,6 +17,8 @@ restore: clean $(foreach f, $(DOT_FILES), restore-dot-files-$(f))
 remove: restore  $(foreach f, $(DOT_FILES), remove-dot-files-$(f))
 
 clean: $(foreach f, $(DOT_FILES), unlink-dot-file-$(f))
+
+ssh: add-ssh-config
 
 zsh: $(foreach f, $(filter .zsh%, $(DOT_FILES)), link-dot-file-$(f)) add-zsh-custom link-bin-dir
 
@@ -34,6 +36,9 @@ add-zsh-custom:
 	@cp zsh_custom/*.zsh-theme zsh/themes/
 	@ln -snf $(CURRENTDIR)/zsh_custom/$(shell uname).zsh $(CURRENTDIR)/zsh/custom/$(shell uname).zsh
 	@ln -snf $(CURRENTDIR)/zsh_custom/snippets $(CURRENTDIR)/zsh/snippets
+
+add-ssh-config:
+	@cp config ~/.ssh/config
 
 make-backup-dir:
 	mkdir -p $(BACKUPDIR)
