@@ -10,7 +10,7 @@ compinit
 
 source $ZSH/oh-my-zsh.sh
 
-export PATH="$PATH:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:`pwd`/bin"
+export PATH="$PATH:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin:`pwd`/bin:/usr/local"
 
 # alias 
 alias ll='ls -ltar'

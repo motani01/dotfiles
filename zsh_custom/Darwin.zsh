@@ -21,4 +21,4 @@ export GOBIN=$GOPATH/bin
 alias memocat='memo list --fullpath | peco | xargs cat'
 
 # 鍵の設定
-ssh-add -K ~/.ssh/id_rsa_20170925
+ssh-add -K ~/.ssh/id_rsa_20181031
