@@ -1,5 +1,5 @@
 # login1
-Host *.kks.ynwp.yahoo.co.jp *.ssk.ynwp.yahoo.co.jp *.ops.bbt.yahoo.co.jp *.ops.ogk.yahoo.co.jp
+Host *.kks.ynwp.yahoo.co.jp *.ssk.ynwp.yahoo.co.jp *.ops.bbt.yahoo.co.jp *.ops.ogk.yahoo.co.jp !ciccs01a.ops.bbt.*
     ProxyCommand ssh login1.corp.yahoo.co.jp nc %h %p
 
 Host login1.corp.yahoo.co.jp
@@ -17,3 +17,4 @@ Host *
   User         motani
   ForwardAgent yes
   Protocol     2
+  HostkeyAlgorithms +ssh-dss
