@@ -1,0 +1,6 @@
+vim/bundle/*
+!vim/bundle/neobundle/
+vim/reference/*
+vim/bundle/neobundle.vim
+zsh/
+ssh/known_hosts

@@ -1,0 +1,6 @@
+# All config
+Host *
+    User         motani
+    ForwardAgent yes
+    Protocol     2
+    HostKeyAlgorithms +ssh-dss
