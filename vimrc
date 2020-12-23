@@ -23,6 +23,7 @@ function! s:LoadBundles()
   NeoBundle 'bling/vim-airline'
   NeoBundle 'vim-scripts/sudo.vim.git'
   NeoBundle 'StanAngeloff/php.vim.git'
+  NeoBundle 'scrooloose/nerdtree'
   " ...
   " 読み込んだプラグインの設定
   " ...
@@ -78,6 +79,7 @@ set enc=utf-8
 "se tags=.tags;
 set nobackup
 set swapfile
+tab ba
 
 nmap <Space>n :bn<CR>
 nmap <Space>p :bp<CR>
@@ -93,3 +95,5 @@ inoremap <C-b> <Left>
 inoremap <C-f> <Right>
 inoremap <C-h> <BackSpace>
 inoremap <C-d> <Del>
+
+nmap <silent><C-e> :NERDTreeToggle<CR>
